@@ -49,3 +49,58 @@ Bu komut, `refs/tags` dizinindeki son 10 etiketin adını (`--count=10` dan dola
 `--sort=taggerdate` parametresi etiketlerin oluşturma tarihine göre artan sıralamayı, `--sort=-taggerdate` azalan sıralamayı sağlar. 
 `--format` parametresi, etiket adını, etiketi oluşturan kullanıcının adını ve e-posta adresini, oluşturma tarihini gösterir.
 
+---
+
+### Etiketin bilgilerini formatlı olarak getirmek
+  
+```shell
+$ git tag -n --sort=taggerdate --format '%(refname:short) %(contents) %(taggername) %(taggeremail) - %(taggerdate:short)' cnrupf-1.0.0.350
+cnrupf-1.0.0.350 cnrupf new version is 1.0.0.350
+ jenkins.user <jenkins.user@ulakhaberlesme.com.tr> - 2022-04-26
+```
+
+---
+
+### Anahttarların Listesi
+
+https://github.com/git/git/blob/master/ref-filter.c#L619
+
+```
+} valid_atom[] = {
+    { "refname" },
+    { "objecttype" },
+    { "objectsize", FIELD_ULONG },
+    { "objectname" },
+    { "tree" },
+    { "parent" },
+    { "numparent", FIELD_ULONG },
+    { "object" },
+    { "type" },
+    { "tag" },
+    { "author" },
+    { "authorname" },
+    { "authoremail" },
+    { "authordate", FIELD_TIME },
+    { "committer" },
+    { "committername" },
+    { "committeremail" },
+    { "committerdate", FIELD_TIME },
+    { "tagger" },
+    { "taggername" },
+    { "taggeremail" },
+    { "taggerdate", FIELD_TIME },
+    { "creator" },
+    { "creatordate", FIELD_TIME },
+    { "subject" },
+    { "body" },
+    { "contents" },
+    { "contents:subject" },
+    { "contents:body" },
+    { "contents:signature" },
+    { "upstream" },
+    { "symref" },
+    { "flag" },
+    { "HEAD" },
+    { "color" },
+};
+```
