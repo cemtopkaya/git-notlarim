@@ -64,6 +64,7 @@ cnrupf-1.0.0.350 cnrupf new version is 1.0.0.350
 ### Anahttarların Listesi
 
 https://github.com/git/git/blob/master/ref-filter.c#L619
+https://git-scm.com/docs/git-rev-list#Documentation/git-rev-list.txt---dateltformatgt
 
 ```
 } valid_atom[] = {
