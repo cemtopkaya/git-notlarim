@@ -61,6 +61,26 @@ cnrupf-1.0.0.350 cnrupf new version is 1.0.0.350
 
 ---
 
+### Sıralayarak (sort) günlükleri göstermek
+
+`git log` komutunda `--sort` seçeneği ile kullanılabilecek anahtar değerleri şunlardır:
+
+*   `commit`: commit id'ye göre sıralama (varsayılan)
+*   `author`: yazarın adı, soyadı veya e-posta adresine göre sıralama
+*   `committer`: committer'ın adı, soyadı veya e-posta adresine göre sıralama
+*   `authordate`: commit zamanına göre yazar adına göre sıralama
+*   `committerdate`: commit zamanına göre committer adına göre sıralama
+*   `subject`: commit başlığına göre sıralama
+*   `refname`: branch veya tag isimlerine göre sıralama
+*   `taggerdate`: tagger'ın tarihine göre sıralama
+*   `tagger`: tagger'ın adına göre sıralama
+*   `topo-order`: topolojik sıralama
+*   `reverse`: ters sıralama
+
+Örneğin, `git log --sort=author` şeklinde kullanarak commitleri yazarlarına göre sıralayabilirsiniz.
+
+---
+
 ### Anahttarların Listesi
 
 https://github.com/git/git/blob/master/ref-filter.c#L619
